@@ -1,0 +1,76 @@
+<!--LISTA-->
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="static/core/css/style.css">
+        <title>Ground Zero</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+<!-- menu navegador-->
+        <header>
+	<nav>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+            <li><a href="core/form_crearproducto.html">CREAR PRODUCTO</a></li>
+		</ul>
+	</nav>
+</header>
+<br><br><br><br>
+    
+<!--HOME-->
+            <div id="home">
+                <br><br>
+                <h1>Ground Zero</h1>
+            </div>
+        </div>
+<br><br><br>
+
+
+<!--LISTA DE PRODUCTOS INGRESADOS-->
+
+    <div class="row" id="tabla_productos"> 
+        <table border="1" style="border-collapse: collapse; text-align: center;
+        background-color: rgba(50, 50, 165, 0.493); font-size: 20px; font-family: monospace;
+        width: 1000px; height: 120px; margin: auto; margin-top: auto; "> 
+            <tr>
+                <td>{{ve.idProveedor}}</td>
+                <td>{{ve.Nombre}}</td>
+                <td>{{ve.Telefono}}</td>
+                <td>{{ve.Direccion}}</td>
+                <td>{{ve.Email}}</td>
+                <td>{{ve.Pais}}</td>
+                <td>{{ve.Contraseña}}</td>
+                <td>{{ve.Moneda}}</td>
+                <td>{{ve.categoria}}</td>
+            </tr>
+            {%for ve in datos %}
+                <tr>
+                    <td>{{ve.idProveedor}}</td>
+                    <td>{{ve.Nombre}}</td>
+                    <td>{{ve.Telefono}}</td>
+                    <td>{{ve.Direccion}}</td>
+                    <td>{{ve.Email}}</td>
+                    <td>{{ve.Pais}}</td>
+                    <td>{{ve.Contraseña}}</td>
+                    <td>{{ve.Moneda}}</td>
+                    <td>{{ve.categoria}}</td>
+                </tr>
+            {%endfor%}
+        </table>
+
+    </div>
+<br><br><br>
+
+<!--FOOTER-->
+<footer>
+    &copy;Copyrigth Derechos reservados - Valentino Hernández<br>
+    <br>
+    <div id="redes">
+        <img src="{%static 'core/img/redes.png'%}" width="150px" height="40px">
+    </div>
+</footer>
+    </body>
+</html>
